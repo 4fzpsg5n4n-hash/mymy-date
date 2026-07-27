@@ -91,7 +91,7 @@
   const LETTER_TEXT =
 `Coucou Mymy,
 
-Depuis plusieurs jours, on échange et j’avoue que j’apprécie vraiment chacune de nos conversations.
+Depuis plusieurs jours, on échange et j’avoue que j’apprécie vraiment nos conversations.
 
 J’aimerais beaucoup apprendre à te connaître davantage, mais cette fois en dehors d’un écran.
 
