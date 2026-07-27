@@ -175,7 +175,8 @@ button:focus-visible{
   bottom: 6%;
   width: 78%;
   height: 82%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 120%);
+  opacity: 0
   background:
     linear-gradient(90deg, rgba(255,255,255,.7), transparent),
     #fffaf0;
@@ -214,6 +215,7 @@ button:focus-visible{
 
 .envelope.is-opening .env-letter-peek{
   transform: translate(-50%, -46%);
+  opacity: 1
 }
 
 /* Rabat supérieur (triangle), pivote vers le haut/arrière à l'ouverture */
