@@ -313,6 +313,7 @@ button:focus-visible{
   white-space: pre-wrap;
   min-height: 5em;
   transform: none;
+  animation: textAppear .8s ease forwards;
 }
 .paper-text--static{ 
  animation: fadeLetter 1s ease forwards;
@@ -498,4 +499,16 @@ button:focus-visible{
 @media (max-height: 560px){
   .envelope{ width: 200px; }
   .hint-text{ font-size: 22px; }
+}
+
+@keyframes textAppear{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
