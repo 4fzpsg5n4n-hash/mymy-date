@@ -130,6 +130,7 @@ button:focus-visible{
   position: relative;
   width: clamp(220px, 60vw, 320px);
   aspect-ratio: 3 / 2;
+  overflow: hidden;
   animation: breathe 4.5s ease-in-out infinite;
 }
 
@@ -175,7 +176,7 @@ button:focus-visible{
   bottom: 6%;
   width: 78%;
   height: 82%;
-  transform: translate(-50%, 120%);
+  transform: translate(-50%, 100%);
   opacity: 0
   background:
     linear-gradient(90deg, rgba(255,255,255,.7), transparent),
