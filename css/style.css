@@ -372,12 +372,12 @@ button:focus-visible{
 
 .btn-ghost{
   display: block;
-  margin: 28px auto 0;
-  padding: 12px 28px;
+  margin: 32px auto 0;
+  padding: 16px 38px;
   border: 1px solid var(--gold);
   border-radius: 999px;
   font-family: var(--font-ui);
-  font-size: 17px;
+  font-size: 21px;
   font-style: italic;
   color: var(--ink);
   background: transparent;
@@ -418,10 +418,10 @@ button:focus-visible{
 }
 
 .btn-answer{
-  padding: 14px 30px;
+  padding: 18px 42px;
   border-radius: 999px;
   font-family: var(--font-ui);
-  font-size: 19px;
+  font-size: 22px;
   letter-spacing: .3px;
   transition: transform .35s var(--ease-soft), padding .35s var(--ease-soft),
               font-size .35s var(--ease-soft), opacity .4s ease, background .3s ease, box-shadow .3s ease;
