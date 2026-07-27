@@ -176,7 +176,7 @@ button:focus-visible{
   bottom: 6%;
   width: 78%;
   height: 82%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 0%);
   opacity: 0
   background:
     linear-gradient(90deg, rgba(255,255,255,.7), transparent),
