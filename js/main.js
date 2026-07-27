@@ -36,9 +36,11 @@
   function onScreenEnter(n){
     if(n === 2){
       window.PetalField.setMode("petals");
-      if(!state.screen2Typed){
-        state.screen2Typed = true;
-        typeLetter();
+  if(!state.screen2Typed){
+    state.screen2Typed = true;
+    setTimeout(() => {
+      typeLetter();
+    }, 1200);
       }
     }
     if(n === 4){
@@ -141,11 +143,11 @@ Alors je voulais te poser une petite question…`;
   const taunt = document.getElementById("taunt-text");
 
   const TAUNTS = [
-    "Tu es sûre ? 🥺",
+    "Tu t'es trompée de bouton",
     "Réfléchis encore…",
-    "Promis je suis sympa 😄",
-    "Tu me fais peur 😅",
-    "Bon… je vais finir par enlever ce bouton.",
+    "Tu fais ça pour m'embêter ??",
+    "Pas cool",
+    "Bon… j'enlève ce bouton.",
   ];
 
   function showTaunt(msg){
