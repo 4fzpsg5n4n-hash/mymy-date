@@ -319,7 +319,19 @@ button:focus-visible{
   white-space: pre-wrap;
   min-height: 5em;
 }
-.paper-text--static{ white-space: normal; }
+.paper-text--static{ 
+ animation: fadeLetter 1s ease forwards;
+@keyframes fadeLetter{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);}
+ white-space: normal;
+}
+
 
 /* Curseur "machine à écrire" */
 .typewriter-cursor{
