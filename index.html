@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Une lettre pour Mymy</title>
+<meta name="description" content="Une petite lettre à ouvrir avec le cœur.">
+
+<!-- Polices : une manuscrite élégante pour les moments "signature", -->
+<!-- une manuscrite plus lisible pour le corps de la lettre, -->
+<!-- et un serif sobre pour les petits éléments d'interface. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Toile de fond : cœurs discrets (écran 1) puis pétales (écrans suivants) -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- Toile dédiée aux confettis (écran 3, réponse "Oui") -->
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+<main id="app">
+
+  <!-- ============================================================
+       ÉCRAN 1 — L'enveloppe
+  ============================================================= -->
+  <section class="screen active" id="screen-1" aria-label="Lettre à ouvrir">
+    <div class="scene-1-inner">
+
+      <button class="envelope-wrap" id="envelope-btn" aria-label="Ouvrir la lettre">
+        <div class="envelope" id="envelope">
+
+          <!-- Le rabat arrière donne de la profondeur à l'ouverture -->
+          <div class="env-flap-shadow"></div>
+
+          <!-- La lettre, cachée dans l'enveloppe, glissera vers le haut -->
+          <div class="env-letter-peek" id="env-letter-peek">
+            <div class="peek-lines">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <!-- Corps de l'enveloppe (pochette avant en triangle) -->
+          <div class="env-body">
+            <div class="env-pocket-left"></div>
+            <div class="env-pocket-right"></div>
+          </div>
+
+          <!-- Rabat supérieur, qui s'ouvre au clic -->
+          <div class="env-flap" id="env-flap">
+            <div class="wax-seal" id="wax-seal">
+              <span class="wax-letter">M</span>
+              <span class="wax-heart">❤</span>
+              <span class="wax-letter">S</span>
+            </div>
+          </div>
+
+        </div>
+      </button>
+
+      <p class="hint-text">Une lettre t’attend <span aria-hidden="true">❤️</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ÉCRAN 2 — La lettre se déplie
+  ============================================================= -->
+  <section class="screen" id="screen-2" aria-label="Lettre">
+    <div class="paper-wrap">
+      <article class="paper" id="paper-2">
+        <p class="paper-text" id="typewriter-text" aria-live="polite"></p>
+        <button class="btn-ghost btn-continue" id="btn-to-3" hidden>Continuer</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ÉCRAN 3 — La question
+  ============================================================= -->
+  <section class="screen" id="screen-3" aria-label="Une question">
+    <div class="question-wrap">
+      <h1 class="question-text">Est-ce que tu accepterais un date avec moi&nbsp;? <span aria-hidden="true">❤️</span></h1>
+
+      <div class="buttons-row" id="buttons-row">
+        <button class="btn-answer btn-oui" id="btn-oui">❤️ Oui</button>
+        <button class="btn-answer btn-non" id="btn-non">🤍 Non</button>
+      </div>
+
+      <p class="taunt-text" id="taunt-text" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ÉCRAN 4 — Le rendez-vous
+  ============================================================= -->
+  <section class="screen" id="screen-4" aria-label="Détails du rendez-vous">
+    <div class="paper-wrap">
+      <article class="paper" id="paper-4">
+        <p class="paper-text paper-text--static">
+          Super <span aria-hidden="true">😊</span><br><br>
+          Alors je te propose&nbsp;:<br><br>
+          📅 Mercredi<br>
+          🕞 15h30<br>
+          📍 Les Tuileries<br><br>
+          J’ai vraiment hâte de te voir.<br><br>
+          À mercredi <span aria-hidden="true">❤️</span><br>
+          Sam
+        </p>
+        <button class="btn-ghost btn-continue" id="btn-to-5">J’ai hâte aussi ❤️</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ÉCRAN 5 — Écran final
+  ============================================================= -->
+  <section class="screen" id="screen-5" aria-label="À bientôt">
+    <div class="final-glow" aria-hidden="true"></div>
+    <div class="final-wrap">
+      <h1 class="final-title">À très bientôt Mymy <span aria-hidden="true">❤️</span></h1>
+      <p class="final-sub">Merci d’avoir ouvert cette lettre.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Musique instrumentale : démarre après la première interaction.
+     Dépose ton propre fichier dans assets/music/ (voir README du dossier). -->
+<audio id="bg-music" loop preload="none">
+  <source src="assets/music/musique.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/petals.js"></script>
+<script src="js/confetti.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
