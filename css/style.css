@@ -121,6 +121,9 @@ button:focus-visible{
 .envelope-wrap{
   padding: 0;
   perspective: 1400px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .envelope{
@@ -141,8 +144,8 @@ button:focus-visible{
 .env-body{
   position: absolute;
   inset: 0;
-  border-radius: 6px;
-  background: linear-gradient(180deg, var(--white-broken), var(--cream-deep));
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f4ead8, #e8d6bc);
   box-shadow:
     0 18px 40px -18px rgba(74,60,50,.35),
     0 2px 0 rgba(255,255,255,.6) inset;
@@ -256,6 +259,8 @@ button:focus-visible{
 }
 
 .hint-text{
+  background: transparent;
+  padding: 0;
   font-family: var(--font-signature);
   font-size: clamp(24px, 5.5vw, 32px);
   color: var(--ink);
